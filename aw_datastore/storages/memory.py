@@ -27,7 +27,7 @@ class MemoryStorage(AbstractStorage):
         client,
         hostname,
         created,
-        name=None,
+        name,
         data=None,
     ) -> None:
         if not name:
