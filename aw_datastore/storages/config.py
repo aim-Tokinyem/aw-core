@@ -4,11 +4,11 @@ default_config = """
 [postgreysql]
 
 drivers = ""
-host = ""
-port = ""
-database = ""
-username = ""
-password = ""
+host = "127.0.0.1"
+port = "5432"
+database = "postgres"
+username = "postgres"
+password = "postgres"
 
 """.strip()
 
