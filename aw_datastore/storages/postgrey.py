@@ -4,6 +4,9 @@ import os
 from datetime import datetime, timedelta, timezone
 from typing import Iterable, List, Optional
 
+import pyodbc
+from pyodbc import Error
+
 from aw_core.dirs import get_data_dir
 from aw_core.models import Event
 
