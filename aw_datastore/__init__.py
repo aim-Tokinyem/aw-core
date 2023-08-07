@@ -14,6 +14,7 @@ def get_storage_methods() -> Dict[str, Callable[..., storages.AbstractStorage]]:
         SqliteStorage.sid: SqliteStorage,
         PostgreyStorage.sid: PostgreyStorage,
     }
+    print("methods={methods}")
     return methods
 
 
