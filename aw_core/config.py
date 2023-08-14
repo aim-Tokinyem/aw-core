@@ -62,7 +62,8 @@ def load_config_toml(
             f.write(_comment_out_toml(default_config))
         config_toml = dict()
 
-    config = _merge(default_config_toml, config_toml)
+    #config = _merge(default_config_toml, config_toml)
+    config = _merge(config_toml,default_config_toml)
 
     return config
 
