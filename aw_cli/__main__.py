@@ -11,6 +11,7 @@ import click
 
 from aw_cli.log import find_oldest_log, print_log, LOGLEVELS
 from typing import Optional
+from security import safe_command
 
 
 @click.group()
@@ -22,8 +23,7 @@ def main(testing: bool = False):
 @main.command()
 @click.pass_context
 def qt(ctx):
-    return subprocess.call(
-        ["aw-qt"] + (["--testing"] if ctx.parent.params["testing"] else [])
+    return safe_command.run(subprocess.call, ["aw-qt"] + (["--testing"] if ctx.parent.params["testing"] else [])
     )
 
 
